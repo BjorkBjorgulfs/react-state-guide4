@@ -9,7 +9,7 @@ const Button = ({color, title}:Props)=> {
         backgroundColor : color || "#C49D9D",
         borderRadius: "60px",
         height: "40px",
-        width: "auto",
+        minWidth: "120px",
         color: "#F5F5F5",
         border: "2px solid #C49D9D",
         paddingLeft: "10px",
