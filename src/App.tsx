@@ -31,7 +31,8 @@ function App() {
           return <Button title={button.title}></Button>
         })}
       </nav>
-      <div><h1>Here is a card and button I made using react-props</h1>
+      <div>
+        <h1>Here is a card and button I made using react-props</h1>
       </div>
       <div>
         {profiles.map((profile)=>{
