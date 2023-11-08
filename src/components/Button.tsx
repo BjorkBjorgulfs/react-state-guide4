@@ -5,7 +5,7 @@ type Props = {
     title:string
 }
 const Button = ({color, title}:Props)=> {
-    const styles = {
+    const buttonStyles = {
         backgroundColor : color || "#C49D9D",
         borderRadius: "60px",
         height: "40px",
@@ -14,12 +14,13 @@ const Button = ({color, title}:Props)=> {
         border: "2px solid #C49D9D",
         paddingLeft: "10px",
         paddingRight: "10px",
+        marginRight: "20px"
     }
     //then I made a hover effect using CSS
     
     return (
         <>
-            <button className="button" style = {styles}>{title}</button>
+            <button className="button" style = {buttonStyles}>{title}</button>
         </>
     )
 
