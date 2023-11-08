@@ -1,6 +1,6 @@
-import Card from "./components/Card";
+import Card from "../components/Card";
 import React, {CSSProperties, useState} from "react";
-import NavigationBar from "./components/navigation";
+import NavigationBar from "../components/navigation";
 
 const UkRoyalFamily: React.FC = () => {
 
@@ -14,6 +14,7 @@ const UkRoyalFamily: React.FC = () => {
         setFavorites((prevFavorites) => prevFavorites.filter((favorite) => favorite !== item));
     };
 
+    //here are the different contents that go into the cards using props
     const profiles = [
         {
             id: 1,
@@ -38,6 +39,7 @@ const UkRoyalFamily: React.FC = () => {
           }
     ]
 
+    //styling the body
     const bodyContainerStyles: CSSProperties = {
         height: "800px",
         paddingTop: "40px",
@@ -56,6 +58,9 @@ const UkRoyalFamily: React.FC = () => {
     return (
         <div>
             <div>
+                {/*the navBar where the "favoriteCount" is coming 
+                from a prop in "navigation.tsx". 
+                Lenght counts how many items are put in the favorites array */}
                 <NavigationBar favoriteCount={favorites.length} />
             </div>
             <div style={bodyContainerStyles}>
@@ -64,7 +69,7 @@ const UkRoyalFamily: React.FC = () => {
                 </div>
                 <div style={cardContainerStyles}>
                     {profiles.map ((profile) =>{
-                        return <Card 
+                        return <Card /*returning the card with all of the props */
                             pic={profile.pictureURL} 
                             name={profile.name} 
                             info={profile.info}

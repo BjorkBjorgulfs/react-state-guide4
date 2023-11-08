@@ -1,4 +1,4 @@
-import UkRoyalFamily from "./ukRoyalFamily";
+import UkRoyalFamily from "./pages/ukRoyalFamily";
 
 function App() {
 
