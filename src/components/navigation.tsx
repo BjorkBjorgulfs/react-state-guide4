@@ -8,7 +8,7 @@ type Props = {
 
 const NavigationBar: React.FC<Props> = ({favoriteCount}) => {
     
-    //here are different props that show on the buttons in navbar
+    //here are different titles that show on the buttons in navbar
     const buttons = [
         {title: "UK Royal family"},
         {title: "DK Royal family"},
@@ -26,6 +26,11 @@ const NavigationBar: React.FC<Props> = ({favoriteCount}) => {
         paddingRight: "20px",
         alignItems: "center",
         boxShadow: "0 4px 4px rgba(0, 0, 0, 0.3)"
+    }
+
+    const buttonsStyle: CSSProperties = {
+        display: "flex",
+        gap: "20px"
     }
 
     //styling the heart icon on the right side
@@ -59,14 +64,15 @@ const NavigationBar: React.FC<Props> = ({favoriteCount}) => {
     
     return (
         <div style={navStyles}>
-            <div>
+            <div style={buttonsStyle}>
+                {/*here I use .map to show different titles for the buttons */}
                 {buttons.map((button)=>{
                     return <Button title={button.title}></Button>
                 })}
             </div>
             <button style={heartIconStyle}>
                 <HeartIcon/>
-                <div style={counterNumber}>{favoriteCount}</div> {/*the number will be imported from favorites.tsx */}
+                <div style={counterNumber}>{favoriteCount}</div> {/*the number is imported from home.tsx */}
             </button>
         </div>
     )

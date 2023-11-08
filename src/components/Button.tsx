@@ -4,9 +4,12 @@ type Props = {
     color?:string,
     title:string
 }
+
 const Button = ({color, title}:Props)=> {
+    
+    //styling the button
     const buttonStyles = {
-        backgroundColor : color || "#C49D9D",
+        backgroundColor : color || "#C49D9D", //if the color of the button is not specified elsewhere, then it is "#C49D9d"
         borderRadius: "60px",
         height: "40px",
         minWidth: "120px",
@@ -14,9 +17,8 @@ const Button = ({color, title}:Props)=> {
         border: "2px solid #C49D9D",
         paddingLeft: "10px",
         paddingRight: "10px",
-        marginRight: "20px"
     }
-    //then I made a hover effect using CSS
+    //then I made a hover effect using CSS in button.css
     
     return (
         <>

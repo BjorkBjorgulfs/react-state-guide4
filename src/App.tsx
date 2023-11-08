@@ -1,12 +1,10 @@
-import Home from "./home";
+import UkRoyalFamily from "./ukRoyalFamily";
 
 function App() {
 
   return (
     <div>
-      
-    
-      <Home/>
+      <UkRoyalFamily/>
     </div>
   );
 }

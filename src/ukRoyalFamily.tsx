@@ -1,9 +1,8 @@
-import { profile } from "console";
 import Card from "./components/Card";
-import React, {useState} from "react";
+import React, {CSSProperties, useState} from "react";
 import NavigationBar from "./components/navigation";
 
-const Home: React.FC = () => {
+const UkRoyalFamily: React.FC = () => {
 
     const [favorites, setFavorites] = useState<string[]>([]);
 
@@ -39,12 +38,19 @@ const Home: React.FC = () => {
           }
     ]
 
-    const cardContainerStyles = {
-        height: "600px",
-        backgroundColor: "grey",
+    const bodyContainerStyles: CSSProperties = {
+        height: "800px",
+        paddingTop: "40px",
+        backgroundColor: "lightGrey",
         display: "flex",
-        justifyContent: "spaceBetween",
+        flexDirection: "column",
+        alignItems: "center",
+    }
 
+    const cardContainerStyles: CSSProperties = {
+        display: "flex",
+        paddingTop: "40px",
+        gap: "40px",
     }
 
     return (
@@ -52,11 +58,11 @@ const Home: React.FC = () => {
             <div>
                 <NavigationBar favoriteCount={favorites.length} />
             </div>
-            <div style={cardContainerStyles}>
+            <div style={bodyContainerStyles}>
                 <div>
-                    <h3>Choose your favorite Royals</h3>
+                    <h2>Choose your favorite Royals</h2>
                 </div>
-                <div>
+                <div style={cardContainerStyles}>
                     {profiles.map ((profile) =>{
                         return <Card 
                             pic={profile.pictureURL} 
@@ -68,13 +74,11 @@ const Home: React.FC = () => {
                             removeFavorite={() => removeFavorite(profile.item)}
                             isFavorite={favorites.includes(profile.item)} 
                         />
-                    })}
-                    
-                        
+                    })}    
                 </div>
             </div>
         </div>
     )
 }
 
-export default Home
+export default UkRoyalFamily

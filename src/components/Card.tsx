@@ -12,6 +12,7 @@ type Props = {
 }
 
 const Card: React.FC<Props> = ({pic, name, info, item, addFavorite, removeFavorite, isFavorite }) => {
+    //the favorite function for the favorite button
     const handleFavoriteClick = () => {
         if (isFavorite) {
             removeFavorite(item);
@@ -20,7 +21,8 @@ const Card: React.FC<Props> = ({pic, name, info, item, addFavorite, removeFavori
         }
     }
     
-    const cardStyles = {
+    //styling the card
+    const cardStyles: CSSProperties = {
         borderRadius: "10px",
         border: "2px solid",
         borderColor: "#C49D9D",
@@ -29,13 +31,15 @@ const Card: React.FC<Props> = ({pic, name, info, item, addFavorite, removeFavori
         display: "flex",
         padding: "20px",
         background: "#f5f5f5",
-        alignItems: "center"
+        alignItems: "center",
+        position: "relative"
     }
 
-    const imgStyles = {
+    const imgStyles: CSSProperties = {
         width: "120px",
         height: "120px",
         borderRadius: "80px",
+        objectFit: "cover"
     }
 
     const textDivStyles = {
@@ -46,23 +50,31 @@ const Card: React.FC<Props> = ({pic, name, info, item, addFavorite, removeFavori
         height: "50px",
         width: "50px",
         display: "flex",
-        border: "1px solid",
-        borderRadius: "50px",
-        borderColor: "lightGrey",
+        border: "none",
+        backgroundColor: "inherit",
         alignItems: "center",
         justifyContent: "center",
-        position: "relative" 
+        position: "absolute", 
+        top: "8px",
+        right: "8px"
     }
 
-    const heartStyle = isFavorite ? {fill: 'red'} : { fill: 'none'};
+    //Making changes to the color of the heart if it is favorite or not
+    const heartStyle = {
+        ...isFavorite ? {fill: 'red'} : { fill: 'black'}, 
+    };
 
     return (
         <div style={cardStyles}>
+            {/*I use props to gather the contents in the cards, see "home.tsx"*/}
             <img style={imgStyles} src={pic} alt="profile picture"/>
             <div style={textDivStyles}>
                 <h2>{name}</h2>
                 <p>{info}</p>
             </div>
+            {/*here is the button that triggers the favorite function,
+            it's linked to "home.tsx" where the favoriteCount is triggered
+            and goes from home.tsx to the navigation.tsx */}
             <button style={favoriteButtonStyle} onClick={handleFavoriteClick}>
                 <HeartIcon style={heartStyle}/>
             </button>
