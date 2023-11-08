@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/react-props/static/css/main.640f2682.css",
-    "main.js": "/react-props/static/js/main.426e12d1.js",
-    "static/js/787.54065df8.chunk.js": "/react-props/static/js/787.54065df8.chunk.js",
-    "index.html": "/react-props/index.html",
-    "main.640f2682.css.map": "/react-props/static/css/main.640f2682.css.map",
-    "main.426e12d1.js.map": "/react-props/static/js/main.426e12d1.js.map",
-    "787.54065df8.chunk.js.map": "/react-props/static/js/787.54065df8.chunk.js.map"
+    "main.css": "/react-state-guide4/static/css/main.640f2682.css",
+    "main.js": "/react-state-guide4/static/js/main.47e00a4e.js",
+    "static/js/787.6850302e.chunk.js": "/react-state-guide4/static/js/787.6850302e.chunk.js",
+    "static/media/icon-heart.svg": "/react-state-guide4/static/media/icon-heart.dcf43747205c4d393b547dce25dd7141.svg",
+    "index.html": "/react-state-guide4/index.html",
+    "main.640f2682.css.map": "/react-state-guide4/static/css/main.640f2682.css.map",
+    "main.47e00a4e.js.map": "/react-state-guide4/static/js/main.47e00a4e.js.map",
+    "787.6850302e.chunk.js.map": "/react-state-guide4/static/js/787.6850302e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.640f2682.css",
-    "static/js/main.426e12d1.js"
+    "static/js/main.47e00a4e.js"
   ]
 }
